@@ -3,7 +3,15 @@
     padding:0;
     font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-
+body {
+    background-color:#457b9d;
+}
+h2 {
+    color:#457b9d;
+}
+h1 {
+    color:#f1faee;
+}
 .title {
     text-align:center;
     font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -15,6 +23,7 @@
     flex-direction:column;
     width:15%;
     gap:25px;
+
 }
 
 .momentscalc {
@@ -31,7 +40,7 @@
 }
 
 .card {
-    background:white;
+    background:#a8dadc;
     border-radius:10px;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
     height:350px;
@@ -46,7 +55,12 @@ input {
     display:flex;
     margin-left:2em;
     border-radius:12px;
-    border:1px solid black;
+    border:1px solid #457b9d;
+    appearance:none;
+}
+input:focus {
+    appearance:none;
+    border:none;
 }
 
 button {
@@ -56,13 +70,13 @@ button {
     border-radius:6px;
     padding:0.1em 2em;
     text-align:center;
-    background-color:red;
+    background-color:#457b9d;
     color:white;
 
 }
 
 button:hover {
-    background-color:green;
+    background-color:#77b4d9;
 }
 
 .container {
