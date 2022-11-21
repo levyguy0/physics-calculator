@@ -54,8 +54,55 @@ distancebtn.addEventListener('click', () => {
 //-----------------------------------------------------------------------------------------------------------------------------------------
 
 //Motion: v^2 - u^2 = 2as
+//v^2-2as = u^2
+//a = v^2 - u^2/2s
+//s = v^2-u^2/2a
 
 let finalvinput = document.querySelector('.finalvinput')
 let finalvbtn = document.querySelector('.submitfinalvelocity')
-let initialvinput = document.querySelector('.intialvinput')
-let intialvbtn = document.querySelector('.submitintialvelocity')
+let initialvinput = document.querySelector('.initialvinput')
+let initialvbtn = document.querySelector('.submitinitialvelocity')
+
+let accelinput = document.querySelector('.accelerationinput')
+let accelbtn = document.querySelector('.submitacceleration')
+let motiondistanceinput = document.querySelector('.motiondistanceinput')
+let motiondistancebtn = document.querySelector('.submitmotiondistance')
+
+finalvbtn.addEventListener('click', () =>{
+    finalvinput.value = (2 * parseInt(accelinput.value, 10) * parseInt(motiondistanceinput.value, 10)) + (parseInt(initialvinput ** 2, 10)) + "m/s"
+})
+
+initialvbtn.addEventListener('click', () =>{
+    initialvinput.value = (parseInt(finalvinput.value ** 2, 10)) - (2 * parseInt(accelinput.value, 10) * parseInt(motiondistanceinput.value, 10)) + "m/s"
+})
+
+
+accelbtn.addEventListener('click', () =>{
+    accelinput.value = (parseInt(finalvinput.value ** 2, 10) - parseInt(initialvinput.value **2, 10)) / (2 * parseInt(motiondistanceinput.value, 10)) + "m/s^2"
+})
+
+motiondistancebtn.addEventListener('click', () => {
+    motiondistanceinput.value = (parseInt(finalvinput.value ** 2, 10) - parseInt(initialvinput.value **2, 10)) / (2 * parseInt(accelinput.value, 10)) + "m"
+})
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//Momentum: P = mv
+
+let momentuminput = document.querySelector('.momentuminput')
+let momentumbtn = document.querySelector('.submitmomentum')
+let momentumMassInput = document.querySelector('.momentum-mass-input')
+let momentumMassBtn = document.querySelector('.submit-momentum-mass')
+let momentumVelocityInput = document.querySelector('.momentum-velocity-input')
+let momentumVelocityBtn = document.querySelector('.submit-momentum-velocity')
+
+momentumbtn.addEventListener('click', () => {
+    momentuminput.value = parseInt(momentumMassInput.value, 10) * parseInt(momentumVelocityInput.value, 10)
+})
+
+momentumMassBtn.addEventListener('click', () =>{
+    momentumMassInput.value = parseInt(momentuminput.value, 10) / parseInt(momentumVelocityInput.value, 10)
+})
+
+momentumVelocityBtn.addEventListener('click', () =>{
+    momentumVelocityInput.value = parseInt(momentuminput.value, 10) / parseInt(momentumMassInput.value, 10)
+})

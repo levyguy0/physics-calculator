@@ -9,9 +9,15 @@ body {
 h2 {
     color:#457b9d;
 }
+
 h1 {
     color:#f1faee;
+    text-align:center;
 }
+
+/*.conversion {
+    margin-top:32px;
+}*/
 .title {
     text-align:center;
     font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -40,9 +46,17 @@ h1 {
     gap:25px;
 }
 
+.momentumcalc {
+    display:flex;
+    flex-direction:column;
+    width:15%;
+    gap:25px;
+}
+
 .weight,
 .moments,
-.motion {
+.motion,
+.momentum {
     text-align:center;
     margin-top:1em;
 }
@@ -104,4 +118,10 @@ button:hover {
 
 .submitdistance {
     font-size:0.82rem;
+}
+
+.submitmomentum {
+    font-size:0.75rem;
+    position:relative;
+    left:5px;
 }
