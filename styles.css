@@ -26,6 +26,13 @@ h1 {
 
 }
 
+.motioncalc {
+    display:flex;
+    flex-direction:column;
+    width:15%;
+    gap:10px;
+}
+
 .momentscalc {
     display:flex;
     flex-direction:column;
@@ -34,7 +41,8 @@ h1 {
 }
 
 .weight,
-.moments {
+.moments,
+.motion {
     text-align:center;
     margin-top:1em;
 }

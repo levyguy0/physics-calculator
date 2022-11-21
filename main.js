@@ -50,3 +50,12 @@ let distancebtn = document.querySelector('.submitdistance')
 distancebtn.addEventListener('click', () => {
     distanceinput.value = parseInt(momentinput.value,10) / parseInt(momentforceinput.value,10) + "m"
 })
+
+//-----------------------------------------------------------------------------------------------------------------------------------------
+
+//Motion: v^2 - u^2 = 2as
+
+let finalvinput = document.querySelector('.finalvinput')
+let finalvbtn = document.querySelector('.submitfinalvelocity')
+let initialvinput = document.querySelector('.intialvinput')
+let intialvbtn = document.querySelector('.submitintialvelocity')
